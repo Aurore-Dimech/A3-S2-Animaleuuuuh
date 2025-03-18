@@ -29,3 +29,10 @@ La personne peut décider d'arrêter la partie à tout moment. Les points sont a
 - **Affichage des rounds** : Un système de round étant déjà présent dans le JavaScript, il faudrait maintenant prévoir son affichage sur le frontend
 - **Gestion améliorée du bruit ambiant** : Un traitement plus appronfondi des bruits de fond afin d'éviter que la voix du joueur ou de la joueuse se fonde dedans.
 - **Partage des scores** : augmenter la gamification du produit en proposant de partager ses scores, et ainsi motiver ses proches à essayer de dépasser le score partagé
+
+## Installation
+
+- Cloner le projet.
+- L'ouvrir dans un éditeur de code.
+- Lancer un serveur en ligne (tel que Go Live)
+- Profiter de l'expérience
