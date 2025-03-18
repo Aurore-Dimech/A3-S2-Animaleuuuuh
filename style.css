@@ -18,7 +18,7 @@ body {
 }
 
 .backgound-full {
-    background-image: url(/assets/images/ferme.avif);
+    background-image: url('./assets/ferme.avif');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -123,4 +123,8 @@ img {
 .button:hover {
     background-color: white;
     color: #174537;
+}
+
+.hidden {
+    display: none;
 }

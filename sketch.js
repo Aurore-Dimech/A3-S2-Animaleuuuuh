@@ -2,12 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const URL = "http://127.0.0.1:5500/Ferme/model/";
     let score = 0;
-    let animalToGuess, playerGuess;
+    let playerGuess;
     let round = 0;
     let startButton = document.querySelector('#start-button');
     let stopButton = document.querySelector('#stop-button');
     let gameStarted = false;
     let recognizer;
+    const animalDisplayer = document.querySelector('#animal-title')
+    const imageDisplayer = document.querySelector('#animal')
+    const cardContainer = document.querySelector('#invisibleCard')
+    const subtitle = document.querySelector('#subtitle')
     
     async function createModel() {
         const checkpointURL = URL + "model.json"; 
@@ -36,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
             stopButton.addEventListener('click', () => {
                 gameStarted = false;
                 recognizer.stopListening();
+                cardContainer.classList.toggle('hidden')
+                startButton.classList.toggle('hidden')
+                stopButton.classList.toggle('hidden')
+                subtitle.innerText = "Imite le son de l'animal qui s'affiche"
                 console.log("Game stopped.");
             });
     
@@ -52,6 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startGame = async (classLabels) => {
         gameStarted = true;
+        score = 0;
+        cardContainer.classList.toggle('hidden')
+        startButton.classList.toggle('hidden')
+        stopButton.classList.toggle('hidden')
+        subtitle.innerText = `Score : ${score}`
 
         while (gameStarted){
             await startRound(classLabels);
@@ -59,7 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const startRound = async (classLabels) => {
+        round++
         let animal = getRandomAnimal(classLabels);
+        animalDisplayer.innerText = animal
+        imageDisplayer.src = `./assets/${animal}.jpg`
         let playerGuesses = {};
         console.log('animal', animal);
     
