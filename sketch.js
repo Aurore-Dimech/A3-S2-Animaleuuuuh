@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const URL = "http://127.0.0.1:5500/Ferme/model/";
+    const URL = "http://localhost:65345/model/";
     
     async function createModel() {
         const checkpointURL = URL + "model.json"; 
