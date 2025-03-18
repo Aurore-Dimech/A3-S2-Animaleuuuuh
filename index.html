@@ -10,19 +10,34 @@
 </head>
 
 <body>
-  <div id="label-container"></div>
-
-  <h1>Animaleuuuuh</h1>
-  <div class="animal-card__container">
-    <div class="animal-card">
-        <h2 class="animal-card__title">Quel son fait cet animal ?</h2>
-        <img src="" alt=""/>
+  <div class="backgound-full"> 
+    <div class="titles">
+      <div class="h1 titleColor"> 
+        <h1 class="font-title">Bienvenue dans La belle ferme</h1>
+      </div>
+      <div class="h2 titleColor">
+        <h2 class="font-subtitle">Imite le son de l'animal qui s'affiche</h2>
+      </div>
     </div>
-
-    <button id="start-button">Commencer</button>
-    <button id="stop-button">Arrêter</button>
-
+    <div class="displayPlayingCard">
+      <div>
+        <button class="button start" id="start-button">Commencer</button>
+      </div>
+      <div class="invisibleCard">
+        <div class="CardWithBorder">
+          <div class="card">
+            <h3 class="absolute">La vache</h3>
+            <img class="absolute" id="animal" src="/assets/images/poule.jpeg" alt="animal">
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="button stop" id="stop-button">Arrêter</button>
+      </div>
+    </div>
   </div>
+  
+  <!-- <div id="label-container"></div> -->
 
   <script src="sketch.js"></script>
 </body>
